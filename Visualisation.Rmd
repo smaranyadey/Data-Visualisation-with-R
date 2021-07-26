@@ -1,5 +1,10 @@
 ---
 title: "Creating Stories From Data"
+knit: (function(input_file, encoding) {
+  out_dir <- 'docs';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, 'index.html'))})
 author: "Smaranya Dey"
 date: "7/26/2021"
 output: html_document
