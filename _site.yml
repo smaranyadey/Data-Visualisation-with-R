@@ -9,4 +9,6 @@ navbar:
       href: about.html
 output:
   html_document:
-theme: cosmo
+    theme: cosmo
+    highlight: textmate
+    css: styles.css
