@@ -6,7 +6,9 @@ navbar:
     - text: "Home"
       href: index.html
     - text: "About"
-      href: about.html
+      href: Visualisation.html
 output:
   html_document:
-theme: cosmo
+    theme: cosmo
+    highlight: textmate
+    css: styles.css
