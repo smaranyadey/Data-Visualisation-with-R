@@ -10,7 +10,8 @@ Once we are completed our data analysis and modeling activities, we need to pres
 
 In R, there are a number of packages which we can utilise to create compelling plots. We will primarily be focusing on **ggplot2** and **plotly** here.
 
-## R Markdown
+
+## Introduction to ggplot2
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
@@ -20,7 +21,21 @@ When you click the **Knit** button a document will be generated that includes bo
 summary(cars)
 ```
 
-## Including Plots
+
+## Introduction to plotly
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r}
+dim(cars)
+```
+
+
+
+
+## Data Usage
 
 You can also embed plots, for example:
 
