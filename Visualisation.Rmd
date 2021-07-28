@@ -8,6 +8,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Once we are completed our data analysis and modeling activities, we need to present the same to the wider audiences. For working professionals, the audience can vary from internal team members to the leadership team. To engage with them, we need to build stories using the model findings and insights. And, one of the important elements of those stories is going to be visualisation.
 
+In R, there are a number of packages which we can utilise to create compelling plots. We will primarily be focusing on **ggplot2** and **plotly** here.
+
 ## R Markdown
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
