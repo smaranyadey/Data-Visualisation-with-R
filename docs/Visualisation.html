@@ -266,7 +266,10 @@ $(document).ready(function () {
 
 <div id="TOC">
 <ul>
-<li><a href="#introduction-to-ggplot2">Introduction to ggplot2</a></li>
+<li><a href="#introduction-to-ggplot2">Introduction to ggplot2</a>
+<ul>
+<li><a href="#how-does-ggplot2-works">How does ggplot2 works?</a></li>
+</ul></li>
 <li><a href="#introduction-to-plotly">Introduction to plotly</a></li>
 <li><a href="#data-usage">Data Usage</a></li>
 </ul>
@@ -276,16 +279,25 @@ $(document).ready(function () {
 <p>In R, there are a number of packages which we can utilise to create compelling plots. We will primarily be focusing on <strong>ggplot2</strong> and <strong>plotly</strong> here.</p>
 <div id="introduction-to-ggplot2" class="section level2">
 <h2>Introduction to ggplot2</h2>
-<p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
-<p>When you click the <strong>Knit</strong> button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:</p>
-<pre class="r"><code>summary(cars)</code></pre>
-<pre><code>##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00</code></pre>
+<p>ggplot2 is part of <strong>tidyverse</strong> family of packages created for Data Science. It helps us to create graphics based on the data provided to it.</p>
+<div id="how-does-ggplot2-works" class="section level3">
+<h3>How does ggplot2 works?</h3>
+<p>Let’s take R built-in dataset <em>mpg</em> to understand how to create diffrent charts/plots using the package.</p>
+<pre class="r"><code>data(&quot;mtcars&quot;)
+str(mtcars)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    32 obs. of  11 variables:
+##  $ mpg : num  21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...
+##  $ cyl : num  6 6 4 6 8 6 8 4 4 6 ...
+##  $ disp: num  160 160 108 258 360 ...
+##  $ hp  : num  110 110 93 110 175 105 245 62 95 123 ...
+##  $ drat: num  3.9 3.9 3.85 3.08 3.15 2.76 3.21 3.69 3.92 3.92 ...
+##  $ wt  : num  2.62 2.88 2.32 3.21 3.44 ...
+##  $ qsec: num  16.5 17 18.6 19.4 17 ...
+##  $ vs  : num  0 0 1 1 0 1 0 1 1 1 ...
+##  $ am  : num  1 1 1 0 0 0 0 0 0 0 ...
+##  $ gear: num  4 4 4 3 3 3 3 4 4 4 ...
+##  $ carb: num  4 4 1 1 2 1 4 2 2 4 ...</code></pre>
+</div>
 </div>
 <div id="introduction-to-plotly" class="section level2">
 <h2>Introduction to plotly</h2>
