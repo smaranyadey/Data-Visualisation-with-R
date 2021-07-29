@@ -19,7 +19,7 @@ ggplot2 is part of **tidyverse** family of packages created for Data Science. It
 
 Let us install the library first.
 
-```{r}
+```{r message=FALSE}
 install.packages("ggplot2")
 library(ggplot2)
 ```
