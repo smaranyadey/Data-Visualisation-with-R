@@ -37,6 +37,27 @@ We have information about manufactures, models, classes and types of cars in thi
 head(mpg, 5)
 ```
 
+Let's say we want to have a scatter plot between the engine displacement (*displ* column) and highway miles (*hwy* column). To draw this scatter plot, let us see how **ggplot** works in a step-by-step manner.
+
+```{r}
+p <- ggplot(data = mpg,
+            aes(x = displ, y = hwy))
+p
+```
+
+Well, the above code has created an empty graph with x and y axis as *displ* and *hwy* respectively. 
+
+#### What did we do here?
+We created a ggplot object, specifying the data frame to use to be *mpg* and aesthetic mapping *aes*. The mapping is to mention how the variables in the data are mapped to visual properties.
+
+#### What do we need to bring the scatter plot?
+We need to add what do we want to be on the graph to the existing ggplot object. We will have to add *geom_point* function for creating scatter plot. *geom_*functions are the geometrical properties for bar, line, scatter plots in the ggplot system.
+
+```{r}
+p <- p + geom_point()
+p
+```
+
 ## Introduction to plotly
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.

@@ -310,6 +310,23 @@ str(mpg)</code></pre>
 ## 3 audi         a4      2    2008     4 manual(… f        20    31 p     compa…
 ## 4 audi         a4      2    2008     4 auto(av) f        21    30 p     compa…
 ## 5 audi         a4      2.8  1999     6 auto(l5) f        16    26 p     compa…</code></pre>
+<p>Let’s say we want to have a scatter plot between the engine displacement (<em>displ</em> column) and highway miles (<em>hwy</em> column). To draw this scatter plot, let us see how <strong>ggplot</strong> works in a step-by-step manner.</p>
+<pre class="r"><code>p &lt;- ggplot(data = mpg,
+            aes(x = displ, y = hwy))
+p</code></pre>
+<p><img src="Visualisation_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>Well, the above code has created an empty graph with x and y axis as <em>displ</em> and <em>hwy</em> respectively.</p>
+<div id="what-did-we-do-here" class="section level4">
+<h4>What did we do here?</h4>
+<p>We created a ggplot object, specifying the data frame to use to be <em>mpg</em> and aesthetic mapping <em>aes</em>. The mapping is to mention how the variables in the data are mapped to visual properties.</p>
+</div>
+<div id="what-do-we-need-to-bring-the-scatter-plot" class="section level4">
+<h4>What do we need to bring the scatter plot?</h4>
+<p>We need to add what do we want to be on the graph to the existing ggplot object. We will have to add <em>geom_point</em> function for creating scatter plot. <em>geom_</em>functions are the geometrical properties for bar, line, scatter plots in the ggplot system.</p>
+<pre class="r"><code>p &lt;- p + geom_point()
+p</code></pre>
+<p><img src="Visualisation_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+</div>
 </div>
 </div>
 <div id="introduction-to-plotly" class="section level2">
