@@ -36,7 +36,7 @@ We have information about manufactures, models, classes and types of cars in thi
 ```{r}
 head(mpg, 5)
 ```
-
+  
 Let's say we want to have a scatter plot between the engine displacement (*displ* column) and highway miles (*hwy* column). To draw this scatter plot, let us see how **ggplot** works in a step-by-step manner.
 
 ```{r}
@@ -46,6 +46,7 @@ p
 ```
 
 Well, the above code has created an empty graph with x and y axis as *displ* and *hwy* respectively. 
+
 
 #### What did we do here?
 We created a ggplot object, specifying the data frame to use to be *mpg* and aesthetic mapping *aes*. The mapping is to mention how the variables in the data are mapped to visual properties.
