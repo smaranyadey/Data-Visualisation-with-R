@@ -20,17 +20,22 @@ ggplot2 is part of **tidyverse** family of packages created for Data Science. It
 Let us install the library first.
 
 ```{r eval=FALSE}
-install.packages("ggplot2")
+#install.packages("ggplot2")
 library(ggplot2)
 ```
 
-Let's take R built-in dataset *mtcars* to understand how to create different charts/plots using the package.
+Let's take R built-in dataset *mpg* to understand how to create different charts/plots using the package.
 
 ```{r}
-data("mtcars")
-str(mtcars)
+data("mpg")
+str(mpg)
 ```
 
+We have information about manufactures, models, classes and types of cars in this dataset.
+
+```{r}
+head(mpg, 5)
+```
 
 ## Introduction to plotly
 
