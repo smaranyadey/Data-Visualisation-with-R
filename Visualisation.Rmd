@@ -90,7 +90,7 @@ library(plotly)
 
 Let us take the same *mpg* data to understand how to create charts using plotly. Let's say we want to craete the same scatter plot between the *displ* and *hwy*. 
 
-```{r eval=FALSE}
+```{r message=FALSE}
 fig <- plot_ly(data = mpg,
             x = ~hwy, y = ~displ)
 fig
@@ -103,7 +103,7 @@ If we hover over the points present on the scatterplot, we will see the (x,y) po
 
 We are going to write in a similar fashion like ggplot to see the scatter plot between *displ* and *hwy*, with identifying classes of the cars from the graph as well.
 
-```{r eval=FALSE}
+```{r message=FALSE}
 fig <- plot_ly(data = mpg,
             x = ~hwy, y = ~displ, color = ~class)
 fig
