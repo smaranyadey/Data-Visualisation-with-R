@@ -59,25 +59,57 @@ p <- p + geom_point()
 p
 ```
 
-## Introduction to plotly
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+#### What if we wanted to have different colors for different classes?
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+We are going to plot the scatter plot between *displ* and *hwy*, but we want to identify the classes of the cars from the graph as well.
 
 ```{r}
-dim(cars)
+p <- ggplot(data = mpg,
+            aes(x = displ, y = hwy, colour = class)) +
+  geom_point()
+p
+```
+
+What have we done here? We have created another dimension *class* in the aesthetics of ggplot arguments. Now, we can draw some insights from *displ* vs *hwy* pattern on different classes of cars as well.
+
+
+## Introduction to plotly
+
+Another way we can create interactive graphics is using the package named **plotly**. This package uses the open-source JavaScript graphing library *plotly.js*.
+
+### How does plotly works?
+
+Let us install the library first.
+
+```{r eval=FALSE}
+#install.packages("plotly")
+library(plotly)
 ```
 
 
+Let us take the same *mpg* data to understand how to create charts using plotly. Let's say we want to craete the same scatter plot between the *displ* and *hwy*. 
+
+```{r}
+fig <- plot_ly(data = mpg,
+            x = ~hwy, y = ~displ)
+fig
+```
+
+#### What is different here?
+If we hover over the points present on the scatterplot, we will see the (x,y) points. 
+
+#### What if we wanted to have different colors for different classes?
+
+We are going to write in a similar fashion like ggplot to see the scatter plot between *displ* and *hwy*, with identifying classes of the cars from the graph as well.
+
+```{r}
+fig <- plot_ly(data = mpg,
+            x = ~hwy, y = ~displ, color = ~class)
+fig
+```
 
 
 ## Data Usage
 
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+**coming soon** 
