@@ -99,7 +99,8 @@ p
 
 The above command is also giving the same plot for *displ* vs *hwy*.
 
-***
+<br>
+<br>
 
 
 ## Introduction to plotly
