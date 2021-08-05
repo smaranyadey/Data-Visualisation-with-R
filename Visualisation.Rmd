@@ -101,6 +101,7 @@ The above command is also giving the same plot for *displ* vs *hwy*.
 
 ***
 
+
 ## Introduction to plotly
 
 Another way we can create interactive graphics is using the package named **plotly**. This package uses the open-source JavaScript graphing library *plotly.js*.
