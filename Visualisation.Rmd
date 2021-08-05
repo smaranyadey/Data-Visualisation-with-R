@@ -78,7 +78,7 @@ What have we done here? We have created another dimension *class* in the aesthet
 
 Let us see what is the argument needs to be put in the aesthetics of ggplot.
 
-```{r}
+```{r warning=FALSE}
 p <- ggplot(data = mpg,
             aes(x = displ, y = hwy, shape = class, colour = class)) +
   geom_point()
@@ -99,6 +99,7 @@ p
 
 The above command is also giving the same plot for *displ* vs *hwy*.
 
+***
 
 ## Introduction to plotly
 
