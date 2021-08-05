@@ -13,7 +13,7 @@ In R, there are a number of packages which we can utilise to create compelling p
 
 ## Introduction to ggplot2
 
-ggplot2 is part of **tidyverse** family of packages created for Data Science. It helps us to create graphics based on the data provided to it. 
+ggplot2 is part of **tidyverse** family of packages created for Data Science. It helps us to create graphics based on the data provided to it. Here, mostly we will use examples from 'Data Visualisation' chapter of 'R for Data Science' book written by Hadley Wickham and Garrett Grolemund. 
 
 ### How does ggplot2 works?
 
@@ -60,7 +60,7 @@ p
 ```
 
 
-#### What if we wanted to have different colors for different classes?
+#### What if we wanted to have different colours for different classes?
 
 We are going to plot the scatter plot between *displ* and *hwy*, but we want to identify the classes of the cars from the graph as well.
 
@@ -72,6 +72,32 @@ p
 ```
 
 What have we done here? We have created another dimension *class* in the aesthetics of ggplot arguments. Now, we can draw some insights from *displ* vs *hwy* pattern on different classes of cars as well.
+
+
+#### What if we wanted to have different shapes and colours for different classes?
+
+Let us see what is the argument needs to be put in the aesthetics of ggplot.
+
+```{r}
+p <- ggplot(data = mpg,
+            aes(x = displ, y = hwy, shape = class, colour = class)) +
+  geom_point()
+p
+```
+
+We added both *shape* and *colour* arguments in the aesthetics and here's the plot. We notice, there is no shape assigned for the class *suv*. The reason is, ggplot2 will only use six shapes at a time. 
+
+#### Alternate way to write the code
+
+So far I have written the aesthetics inside the first part of the code snippet. What if we specify the aesthetic inside the second part, as the *geom* is actually clarifying which kind of plot we want for our data.
+
+```{r}
+p <- ggplot(data = mpg) +
+  geom_point(aes(x = displ, y = hwy, colour = class))
+p
+```
+
+The above command is also giving the same plot for *displ* vs *hwy*.
 
 
 ## Introduction to plotly
@@ -99,13 +125,13 @@ fig
 #### What is different here?
 If we hover over the points present on the scatterplot, we will see the (x,y) points. 
 
-#### What if we wanted to have different colors for different classes?
+#### What if we wanted to have different colours for different classes?
 
 We are going to write in a similar fashion like ggplot to see the scatter plot between *displ* and *hwy*, with identifying classes of the cars from the graph as well.
 
 ```{r message=FALSE}
 fig <- plot_ly(data = mpg,
-            x = ~hwy, y = ~displ, color = ~class)
+            x = ~hwy, y = ~displ, colour = ~class)
 fig
 ```
 
