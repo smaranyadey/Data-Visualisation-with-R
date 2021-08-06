@@ -134,7 +134,7 @@ We are going to write in a similar fashion like ggplot to see the scatter plot b
 
 ```{r message=FALSE}
 fig <- plot_ly(data = mpg,
-            x = ~hwy, y = ~displ, colour = ~class)
+            x = ~hwy, y = ~displ, color = ~class)
 fig
 ```
 
